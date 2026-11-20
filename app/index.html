@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>repère — Séance A · Haut du corps · programme Socle</title>
+  <meta name="theme-color" content="#111214" />
+  <link rel="icon" href="/repere/favicon.svg" />
+  <link href="/repere/fonts/brand.css" rel="stylesheet" />
+  <link href="/repere/fonts/fonts.css" rel="stylesheet" />
+  <script type="module" crossorigin src="/repere/assets/app-bYx3TEnx.js"></script>
+  <link rel="modulepreload" crossorigin href="/repere/assets/brand-Df8ttNAC.js">
+  <link rel="modulepreload" crossorigin href="/repere/assets/tempo-DKhyROa7.js">
+  <link rel="modulepreload" crossorigin href="/repere/assets/markers-CeJHR-xO.js">
+  <link rel="stylesheet" crossorigin href="/repere/assets/markers-DgMlOpS6.css">
+  <link rel="stylesheet" crossorigin href="/repere/assets/app-DK5QUq1P.css">
+</head>
+<body class="app">
+  <canvas id="c"></canvas>
+  <div id="fade"></div>
+  <div id="overlay-host"></div>
+
+  <!-- chargement -->
+  <div id="loader">
+    <div class="ld-logo" id="ld-logo"></div>
+    <div class="ld-sub">Préparation de ta séance</div>
+    <div class="ld-ruler"><i id="ld-fill"></i></div>
+    <div class="ld-msg" id="ld-msg">0 %</div>
+  </div>
+
+  <!-- accueil -->
+  <section id="welcome" class="hidden" aria-label="Accueil de la séance">
+    <div class="wc-card">
+      <div class="wc-head">
+        <span class="wc-coach"><i class="dot"></i><span id="wc-coach">Programme du coach</span></span>
+        <span class="wc-by">avec <span id="wc-logo" class="mini-logo"></span></span>
+      </div>
+      <p class="wc-kicker" id="wc-kicker">Programme Socle · Semaine 1 sur 8</p>
+      <h1 class="wc-title"><span id="wc-title">Séance A</span> <em id="wc-sub">haut du corps</em></h1>
+      <div class="wc-stats" id="wc-stats"></div>
+      <ol class="wc-blocks" id="wc-blocks"></ol>
+      <div class="wc-note" id="wc-note"></div>
+      <div class="wc-actions">
+        <button class="btn btn-main" data-start="real"><span>Démarrer la séance</span><small id="wc-real">≈ 55 min · séries et repos réels</small></button>
+        <button class="btn btn-ghost" data-start="demo"><span>Aperçu express</span><small>≈ 5 min · 1 série par exercice</small></button>
+        <button class="btn btn-text" data-start="explore">Explorer librement →</button>
+      </div>
+    </div>
+    <aside class="wc-legend">
+      <h2>Lire ton écran</h2>
+      <ul>
+        <li><b class="lg lg-ecc"></b><div><strong>Bleu = excentrique</strong><span>la phase freinée, celle que l’on contrôle</span></div></li>
+        <li><b class="lg lg-con"></b><div><strong>Orange = concentrique</strong><span>la phase d’effort ; « X » = aussi vite que possible</span></div></li>
+        <li><b class="lg lg-tempo"></b><div><strong>Tempos repère</strong><span>chaque exercice a son protocole : ANCRE, LONG, VERROU…</span></div></li>
+        <li><b class="lg lg-mark"></b><div><strong>Repères</strong><span>articulations, angles et trajectoire en direct</span></div></li>
+        <li><b class="lg lg-cam"></b><div><strong>4 angles de vue</strong><span>touches 1 à 4, ou glisse pour tourner</span></div></li>
+      </ul>
+      <p class="wc-keys"><kbd>Espace</kbd> pause · <kbd>←</kbd><kbd>→</kbd> exercices · <kbd>R</kbd> repères · <kbd>H</kbd> panneaux</p>
+    </aside>
+  </section>
+
+  <div id="ui" class="hidden">
+    <header id="topbar">
+      <a class="brand" href="/repere/" title="repère — accueil" id="brand-logo"></a>
+      <div class="sess">
+        <div class="sess-title"><span id="sess-coach" class="coach-chip"></span><span id="sess-title"></span></div>
+        <div class="sess-sub" id="sess-sub"></div>
+      </div>
+      <div class="top-right">
+        <div class="seg" id="mode-seg">
+          <button data-mode="demo" class="on" title="1 série par exercice, repos accélérés">Aperçu</button>
+          <button data-mode="real" title="Toutes les séries, repos réels">Séance réelle</button>
+        </div>
+        <button class="ic toggle" id="b-marks" title="Repères articulaires et trajectoire (R)"><i class="ico-mark"></i>Repères</button>
+        <button class="ic" id="b-coach" title="Personnaliser (espace coach)">Personnaliser</button>
+        <button class="ic" id="b-hide" title="Masquer / afficher les panneaux (H)">◫</button>
+        <button class="ic" id="b-full" title="Plein écran (F)">⛶</button>
+        <div class="fps" id="fps">— i/s</div>
+      </div>
+    </header>
+
+    <aside id="plan"></aside>
+
+    <aside id="coach">
+      <div class="card" id="ex-card">
+        <div class="ex-kicker" id="ex-kicker"></div>
+        <h2 id="ex-name"></h2>
+        <div class="ex-note" id="ex-note"></div>
+        <div class="ex-presc" id="ex-presc"></div>
+        <div class="coach-note hidden" id="coach-note"><b>Note du coach</b><p id="coach-note-txt"></p></div>
+        <div class="phase" id="phase-box">
+          <div class="phase-label" id="phase-label">—</div>
+          <div class="phase-cue" id="phase-cue"></div>
+        </div>
+        <div class="tempo" id="tempo-box"></div>
+        <div class="sec-title">Points clés</div>
+        <ul class="cues" id="cues"></ul>
+        <div class="sec-title">Muscles ciblés</div>
+        <div class="chips" id="muscles"></div>
+        <div class="sec-title">Erreurs à éviter</div>
+        <ul class="errs" id="errors"></ul>
+        <a class="video" id="video" target="_blank" rel="noopener">Vidéo du coach ↗</a>
+      </div>
+    </aside>
+
+    <div id="counter">
+      <div class="cnt-set" id="cnt-set"></div>
+      <div class="cnt-rep"><b id="cnt-rep">0</b><span id="cnt-rep-of"></span></div>
+      <div class="cnt-proto" id="cnt-proto"></div>
+      <div class="cnt-ruler" id="cnt-ruler"><i id="cnt-cursor"></i></div>
+    </div>
+
+    <div id="rest" class="hidden">
+      <div class="rest-k">Repos</div>
+      <div class="rest-ring">
+        <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="bg" /><circle cx="60" cy="60" r="52" class="fg" id="rest-arc" /></svg>
+        <div class="rest-time" id="rest-time">0:00</div>
+      </div>
+      <div class="rest-next" id="rest-next"></div>
+      <button class="btn btn-main sm" id="rest-skip">Passer le repos</button>
+    </div>
+
+    <div id="end" class="hidden">
+      <div class="end-k" id="end-k">Séance terminée</div>
+      <h2>Bien joué.</h2>
+      <p id="end-p">26 séries, 7 exercices, tempo tenu.</p>
+      <button class="btn btn-main sm" id="b-restart">Recommencer</button>
+    </div>
+
+    <div id="interval" class="hidden">
+      <div class="iv-state" id="iv-state">SPRINT</div>
+      <div class="iv-time" id="iv-time">0:20</div>
+      <div class="iv-round" id="iv-round">Tour 1 / 7</div>
+      <div class="iv-bar"><i id="iv-fill"></i></div>
+    </div>
+
+    <footer id="transport">
+      <div class="tp-left">
+        <button class="ic" id="b-prev" title="Exercice précédent">⏮</button>
+        <button class="ic big" id="b-play" title="Lecture / pause (espace)">❚❚</button>
+        <button class="ic" id="b-next" title="Exercice suivant">⏭</button>
+        <div class="seg small" id="speed-seg">
+          <button data-speed="0.5">0,5×</button>
+          <button data-speed="1" class="on">1×</button>
+          <button data-speed="2">2×</button>
+        </div>
+        <button class="ic toggle" id="b-loop" title="Boucler l'exercice en cours">↻ Boucle</button>
+      </div>
+      <div class="timeline" id="timeline"></div>
+      <div class="tp-right">
+        <div class="seg small" id="cam-seg"></div>
+        <button class="ic toggle on" id="b-auto" title="Caméra cinématique automatique">Auto</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- espace coach : personnalisation -->
+  <aside id="drawer" class="closed" aria-label="Personnaliser">
+    <div class="dr-head">
+      <div><span class="dr-k">Espace coach</span><h2>Personnaliser</h2></div>
+      <button class="ic" id="dr-close" title="Fermer">✕</button>
+    </div>
+    <div class="dr-tabs" id="dr-tabs">
+      <button data-tab="brand" class="on">Salle</button>
+      <button data-tab="prog">Programme</button>
+      <button data-tab="note">Notes</button>
+    </div>
+    <div class="dr-body">
+      <section data-pane="brand">
+        <div class="fld"><span>Préréglages complets</span><div class="presets" id="f-presets"></div></div>
+        <div class="dr-group">Identité</div>
+        <label class="fld"><span>Nom de votre marque</span><input id="f-brand" maxlength="22" placeholder="Vide = logo repère" /></label>
+        <label class="fld"><span>Signature</span><input id="f-sub" maxlength="40" placeholder="ex. coaching privé · Lyon" /></label>
+        <label class="fld"><span>Phrase au mur</span><input id="f-slogan" maxlength="60" placeholder="ex. La force est un artisanat." /></label>
+        <div class="fld"><span>Logo (PNG ou SVG)</span>
+          <div class="logo-up"><label class="btn btn-ghost sm" for="f-logo">Importer un logo</label><input id="f-logo" type="file" accept="image/png,image/svg+xml,image/jpeg,image/webp" hidden /><button class="btn btn-text sm hidden" id="f-logo-x">Retirer</button><span class="logo-prev" id="f-logo-prev"></span></div>
+        </div>
+        <div class="fld"><span>Couleur de marque</span><div class="swatches" id="f-accent"></div></div>
+        <div class="fld"><span>Typographie de l’enseigne</span><div class="seg" data-opt="font"></div></div>
+        <div class="dr-group">Salle</div>
+        <div class="fld"><span>Murs</span><div class="swatches sq" data-opt="wall"></div></div>
+        <div class="fld"><span>Fresque murale</span><div class="seg" data-opt="mural"></div></div>
+        <div class="fld"><span>Structure des machines</span><div class="swatches sq" data-opt="frame"></div></div>
+        <div class="fld"><span>Sellerie et tapis</span><div class="swatches sq" data-opt="pad"></div></div>
+        <div class="fld"><span>Sol</span><div class="seg" data-opt="floor"></div></div>
+        <div class="fld"><span>Ambiance lumineuse</span><div class="seg" data-opt="light"></div></div>
+        <div class="fld"><span>Tenue du pantin</span><div class="swatches sq" data-opt="outfit"></div></div>
+        <p class="hint">Tout s’applique en direct : enseigne, fresques, bannières, marquage au sol, plaques des machines, écran TV, visière et tenue du pantin, interface.</p>
+      </section>
+      <section data-pane="prog" class="hidden">
+        <p class="hint">Séries, répétitions, protocole de tempo et repos. Choisissez un tempo repère ou tapez votre propre code (ex. 3·1·X·0). Le pantin s’adapte immédiatement.</p>
+        <div id="f-prog"></div>
+      </section>
+      <section data-pane="note" class="hidden">
+        <label class="fld"><span>Message d’accueil</span><textarea id="f-welcome" rows="3" placeholder="ex. Garde une répétition en réserve sur chaque série."></textarea></label>
+        <div id="f-notes"></div>
+      </section>
+    </div>
+    <div class="dr-foot">
+      <button class="btn btn-ghost sm" id="dr-reset">Réinitialiser</button>
+      <button class="btn btn-main sm" id="dr-apply">Appliquer</button>
+    </div>
+  </aside>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="repère">
+  <rect width="256" height="256" rx="56.32" fill="#111214"/>
+  <g transform="translate(65.5 112) scale(1.25)">
+    <g fill="#EEEAE3"><path d="M99 59.97 A50 50 0 1 0 83.46 87.16 L67.4 69.32 A26 26 0 1 1 75.48 55.18 Z"/><path d="M2 40 h96 v20 h-96 Z"/></g>
+    <path fill="#7480FF" d="M30 -66 L51 -66 L72 -20 L51 -20 Z"/>
+  </g>
+</svg>

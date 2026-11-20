@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>repère — le bon geste, avant la première rep.</title>
+  <meta name="description" content="repère transforme les programmes des coachs sportifs en séances 3D : chaque exercice exécuté parfaitement, au tempo exact, dans une vraie salle, à vos couleurs." />
+  <meta name="theme-color" content="#0d0e10" />
+  <meta property="og:title" content="repère — le bon geste, avant la première rep." />
+  <meta property="og:description" content="Vos programmes en séances 3D : tempo exact, vraie salle, votre marque." />
+  <meta property="og:image" content="/repere/img/hero-poster.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/repere/favicon.svg" />
+  <link href="/repere/fonts/brand.css" rel="stylesheet" />
+  <link href="/repere/fonts/fonts.css" rel="stylesheet" />
+  <script type="module" crossorigin src="/repere/assets/landing-aUdpbkxt.js"></script>
+  <link rel="modulepreload" crossorigin href="/repere/assets/brand-Df8ttNAC.js">
+  <link rel="modulepreload" crossorigin href="/repere/assets/tempo-DKhyROa7.js">
+  <link rel="modulepreload" crossorigin href="/repere/assets/markers-CeJHR-xO.js">
+  <link rel="stylesheet" crossorigin href="/repere/assets/markers-DgMlOpS6.css">
+  <link rel="stylesheet" crossorigin href="/repere/assets/landing-CRqP_ara.css">
+</head>
+<body class="lp is-loading">
+  <!-- préchargement -->
+  <div id="pre" aria-hidden="true">
+    <div class="pre-logo" id="pre-logo"></div>
+    <div class="pre-ruler"><span class="pre-scale"></span><i id="pre-cursor"></i></div>
+    <div class="pre-meta"><span>Chargement de la salle</span><b id="pre-pct">000</b></div>
+  </div>
+
+  <!-- scène 3D vivante -->
+  <canvas id="stage" aria-hidden="true"></canvas>
+  <div id="stage-marks" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div id="cursor" aria-hidden="true"><i></i></div>
+
+  <!-- règle de défilement -->
+  <div id="tape" aria-hidden="true"><div class="tape-scale"></div><i id="tape-cursor"><b id="tape-val">0</b></i></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="nav-logo" id="nav-logo" aria-label="repère — accueil"></a>
+    <nav class="nav-links">
+      <a href="#produit">Produit</a>
+      <a href="#tempos">Tempos</a>
+      <a href="#marque">Votre salle</a>
+      <a href="#methode">Méthode</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="lnk" href="/repere/app/">Voir une séance</a>
+      <a class="btn btn-chalk" href="#contact"><span>Réserver une démo</span><i class="tk"></i></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============================================================ HÉRO -->
+    <section class="hero see" id="hero">
+      <div class="hero-eyebrow reveal"><span class="lbl">Séances 3D pour coachs sportifs</span><span class="live" id="live"><i></i>En direct<span class="lv-ex"> · <b id="live-ex">développé militaire</b> · tempo <b id="live-proto">RAMPE</b></span> · <b id="live-phase">—</b></span></div>
+      <h1 class="hero-title">
+        <span class="ln"><span class="w">Le bon geste,</span></span>
+        <span class="ln ln2"><span class="w">avant la première <em>rep.</em></span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-sub reveal">repère transforme vos programmes en séances 3D. Chaque exercice est exécuté parfaitement, <strong>à votre tempo</strong>, dans une vraie salle, <strong>à vos couleurs</strong>. Vos élèves voient le geste avant de le faire.</p>
+        <div class="hero-ctas reveal">
+          <a class="btn btn-main" href="/repere/app/"><span>Voir une séance en 3D</span><i class="tk"></i></a>
+          <a class="btn btn-ghost" href="#contact"><span>Réserver une démo</span></a>
+        </div>
+        <div class="hero-note reveal"><span class="lbl">Rendu en temps réel</span><p>Rien n'est filmé : chaque articulation est calculée, image par image.</p></div>
+      </div>
+    </section>
+
+    <!-- ============================================================ BANDEAU -->
+    <div class="marquee" aria-hidden="true"><div class="mq-track" id="mq"></div></div>
+
+    <!-- ============================================================ MANIFESTE -->
+    <section class="paper manifesto" id="manifeste">
+      <div class="wrap">
+        <div class="sec-head"><span class="num">01</span><span class="lbl">Le constat</span></div>
+        <h2 class="big-statement" data-words>Un PDF ne montre pas une descente <em>en trois secondes.</em></h2>
+        <div class="mf-grid">
+          <div class="mf-media">
+            <video src="/repere/video/mains.mp4" poster="/repere/video/mains-poster.jpg" autoplay muted loop playsinline preload="none"></video>
+            <span class="cap">Fig. 01 — prise pronation, barre de tirage</span>
+          </div>
+          <div class="mf-text">
+            <p class="lead">Vous avez écrit le programme parfait. Puis votre élève arrive seul en salle. Il cherche la machine, accélère la descente, oublie la consigne.</p>
+            <p>Les vidéos trouvées en ligne montrent un autre geste, un autre tempo, un autre coach. Les notes en marge du PDF ne disent pas où vont les coudes. Et vous corrigez la même chose à chaque bilan.</p>
+            <p class="signature"><em>repère montre le vôtre.</em></p>
+            <ul class="mf-facts">
+              <li><b>3·1·X·0</b><span>votre tempo, exécuté au centième</span></li>
+              <li><b>360°</b><span>tous les angles, au ralenti</span></li>
+              <li><b>0</b><span>installation pour vos élèves</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ PRODUIT (scène épinglée) -->
+    <section class="story see" id="produit">
+      <div class="story-pin">
+        <div class="story-head"><span class="num">02</span><span class="lbl">Ce que voit votre élève</span></div>
+        <div class="chapters">
+          <article class="chap" data-shot="salle">
+            <span class="chap-n">01 / 05</span>
+            <h3>Une vraie salle, <em>à l'échelle.</em></h3>
+            <p>Poulies, bancs, haltères, assault bike : chaque machine est modélisée. La charge monte, le câble se tend. Votre élève reconnaît son poste avant d'y être.</p>
+          </article>
+          <article class="chap" data-shot="geste">
+            <span class="chap-n">02 / 05</span>
+            <h3>Le geste est calculé, <em>pas filmé.</em></h3>
+            <p>Articulations, omoplates, trajectoire : la technique est juste à chaque répétition. Activez les repères et les angles s'affichent en direct.</p>
+          </article>
+          <article class="chap" data-shot="tempo">
+            <span class="chap-n">03 / 05</span>
+            <h3>3 secondes de descente. <em>Pas 2,5.</em></h3>
+            <p>Le tempo que vous écrivez est le tempo exécuté. Bleu quand on contrôle, orange quand on pousse : la règle se lit d'un coup d'œil. Ici, le protocole ANCRE : un arrêt net, puis une remontée explosive.</p>
+            <div class="tempo-hud" id="tempo-hud">
+              <div class="th-row"><span>Excentrique</span><span>Pause</span><span>Concentrique</span><span>Pause</span></div>
+              <div class="th-digits"><b>3</b><b>1</b><b class="x">X</b><b>0</b></div>
+              <div class="th-ruler"><i id="th-cursor"></i></div>
+              <div class="th-state" id="th-state">—</div>
+            </div>
+          </article>
+          <article class="chap" data-shot="consignes">
+            <span class="chap-n">04 / 05</span>
+            <h3>Vos mots, <em>au bon moment.</em></h3>
+            <p>Vos points clés apparaissent pendant la bonne phase du mouvement. Votre note personnelle aussi. C'est votre coaching, pas le nôtre.</p>
+            <div class="cue-stack" id="cue-stack">
+              <div class="cue" data-phase="ecc"><i></i>Fléchis seulement les coudes, en 2 s</div>
+              <div class="cue" data-phase="half"><i></i>Demi-répétition, côté étiré</div>
+              <div class="cue" data-phase="con"><i></i>Tends complètement les bras</div>
+              <div class="cue cue-coach"><i></i><span>Note du coach</span> Coudes serrés, on ne triche pas.</div>
+            </div>
+          </article>
+          <article class="chap" data-shot="angles">
+            <span class="chap-n">05 / 05</span>
+            <h3>Tous les angles, <em>au ralenti.</em></h3>
+            <p>Profil, face, dos, trois-quarts, vitesse ×0,5. Votre élève tourne autour du geste comme s'il était à côté de vous, jusqu'au finisher.</p>
+          </article>
+        </div>
+        <div class="story-progress"><i id="story-bar"></i></div>
+      </div>
+    </section>
+
+    <!-- ============================================================ LES TEMPOS REPÈRE -->
+    <section class="tempos see" id="tempos">
+      <div class="tp-panel" data-lenis-prevent>
+        <div class="sec-head"><span class="num">03</span><span class="lbl">Les tempos repère</span></div>
+        <h2>Six tempos. <em>Une méthode.</em></h2>
+        <p class="tp-lead">« 3010 » ne dit pas pourquoi. Chaque exercice reçoit un protocole nommé, avec son intention et sa raison d'être. Choisissez-en un : le pantin l'exécute en direct.</p>
+        <div class="tp-cards" id="tp-cards" role="tablist" aria-label="Protocoles de tempo"></div>
+        <div class="tp-live">
+          <div class="tpl-head"><b id="tpl-name">DEMI</b><span id="tpl-code">1½ · 2·0·1·0</span><em id="tpl-line">Une répétition et demie.</em></div>
+          <div class="tpl-ruler" id="tpl-ruler"><i id="tpl-cursor"></i></div>
+          <div class="tpl-state" id="tpl-state">—</div>
+          <p class="tpl-why" id="tpl-why"></p>
+          <p class="tpl-src" id="tpl-src"></p>
+        </div>
+        <label class="tp-own"><span>Ou tapez votre propre tempo</span><input id="tp-code" placeholder="ex. 4·1·X·1" maxlength="16" autocomplete="off" spellcheck="false" /><small id="tp-own-msg">excentrique · pause · concentrique · pause — X = explosif</small></label>
+      </div>
+    </section>
+
+    <!-- ============================================================ VOTRE SALLE -->
+    <section class="brandlab see" id="marque">
+      <div class="bl-panel" data-lenis-prevent>
+        <div class="sec-head"><span class="num">04</span><span class="lbl">Votre salle</span></div>
+        <h2>Votre nom <em>au mur.</em> Et partout ailleurs.</h2>
+        <p>Enseigne, fresques, bannières, marquage au sol, plaques des machines, écran TV, tenue du pantin : la salle entière prend votre identité. Essayez, tout se met à jour en direct.</p>
+        <div class="bl-field"><span>Quatre identités, une seule salle</span><div class="bl-presets" id="bl-presets"></div></div>
+        <div class="bl-row">
+          <label class="bl-field"><span>Votre nom</span><input id="bl-name" maxlength="22" placeholder="Tapez votre nom" autocomplete="off" /></label>
+          <label class="bl-field"><span>Signature</span><input id="bl-sub" maxlength="40" placeholder="ex. coaching privé · Lyon" autocomplete="off" /></label>
+        </div>
+        <div class="bl-field"><span>Couleur de marque</span><div class="bl-sw" id="bl-sw"></div></div>
+        <div class="bl-opts">
+          <div class="bl-field"><span>Murs</span><div class="bl-chips" data-opt="wall"></div></div>
+          <div class="bl-field"><span>Machines</span><div class="bl-chips" data-opt="frame"></div></div>
+          <div class="bl-field"><span>Sol</span><div class="bl-chips" data-opt="floor"></div></div>
+          <div class="bl-field"><span>Ambiance</span><div class="bl-chips" data-opt="light"></div></div>
+        </div>
+        <a class="btn btn-main" id="bl-open" href="/repere/app/"><span>Ouvrir une séance à ces couleurs</span><i class="tk"></i></a>
+      </div>
+    </section>
+
+    <!-- ============================================================ MÉTHODE -->
+    <section class="paper method" id="methode">
+      <div class="wrap">
+        <div class="sec-head"><span class="num">05</span><span class="lbl">Méthode</span></div>
+        <h2 class="h2">Envoyez votre programme <em>tel qu'il est.</em></h2>
+        <div class="compare" id="compare">
+          <figure class="cmp-a"><img src="/repere/img/programme-avant.jpg" alt="Une séance au format tableau, telle qu'un coach l'envoie à son élève" loading="lazy" /><figcaption>Avant · le tableau</figcaption></figure>
+          <figure class="cmp-b"><img src="/repere/img/app-seance1.jpg" alt="La même séance dans repère, en 3D" loading="lazy" /><figcaption>Après · la séance repère</figcaption>
+            <div class="cmp-ui" aria-hidden="true"><div class="cu-card"><span class="cu-k">Bloc A · série 2 / 4</span><b>Tirage vertical</b><span class="cu-ph"><i></i>ANCRE · concentrique X</span><p>Tire vite, coudes vers les hanches.</p></div><div class="cu-count"><b>4</b><span>/ 6</span><div class="cu-ruler"><i></i></div></div></div></figure>
+          <div class="cmp-handle" id="cmp-handle"><i></i></div>
+        </div>
+        <ol class="steps">
+          <li><span class="st-n">01</span><h3>Vous envoyez</h3><p>PDF, tableur, Notion, capture d'application : votre format, vos exercices, vos supersets.</p></li>
+          <li><span class="st-n">02</span><h3>Nous modélisons</h3><p>Machines, tempo, consignes, repos, finisher. Chaque mouvement est construit et vérifié par la biomécanique.</p></li>
+          <li><span class="st-n">03</span><h3>Vos élèves s'entraînent</h3><p>Un lien par séance, sur ordinateur, tablette ou mobile. Vous ajustez séries, reps et tempo quand vous voulez.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================ DÉMONSTRATION : PROGRAMME SOCLE -->
+    <section class="case" id="cas">
+      <div class="wrap">
+        <div class="case-photo"><img src="/repere/img/dos-tirage.jpg" alt="Athlète au tirage vertical" loading="lazy" /></div>
+        <div class="case-body">
+          <div class="sec-head"><span class="num">06</span><span class="lbl">La démonstration</span></div>
+          <h2 class="h2">Programme Socle, <em>séance A.</em></h2>
+          <p>Notre programme de démonstration : huit semaines, trois séances par semaine. La séance A « haut du corps » est entièrement modélisée : trois blocs en alternance, six tempos repère, des repos réels et un finisher en échelle.</p>
+          <ol class="case-list">
+            <li><b>A</b><span>Tirage vertical <i>ANCRE</i> + Pompes <i>LONG</i></span></li>
+            <li><b>B</b><span>Développé militaire <i>RAMPE</i> + Facepull <i>VERROU</i></span></li>
+            <li><b>C</b><span>Barre au front <i>DEMI</i> + Spider curl <i>CONTRASTE</i></span></li>
+            <li><b>D</b><span>Échelle assault bike <i>10 · 15 · 20 · 15 · 10 s</i></span></li>
+          </ol>
+          <dl class="stats">
+            <div><dt data-count="7">0</dt><dd>exercices</dd></div>
+            <div><dt data-count="19">0</dt><dd>séries</dd></div>
+            <div><dt data-count="6">0</dt><dd>tempos repère</dd></div>
+            <div><dt data-count="60">0</dt><dd>images / seconde</dd></div>
+          </dl>
+          <div class="case-ctas">
+            <a class="btn btn-main" href="/repere/app/"><span>Ouvrir la séance</span><i class="tk"></i></a>
+            <a class="btn btn-ghost" href="/repere/fiche/" target="_blank" rel="noopener"><span>Voir la fiche imprimable</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ POUR QUI -->
+    <section class="who" id="pourqui">
+      <div class="wrap">
+        <div class="sec-head"><span class="num">07</span><span class="lbl">Pour qui</span></div>
+        <h2 class="h2">Pensé pour ceux qui <em>corrigent les gestes.</em></h2>
+        <div class="who-grid">
+          <article><img src="/repere/img/eleve-banc.jpg" alt="" loading="lazy" /><div><h3>Coachs en ligne</h3><p>Vos élèves s'entraînent loin de vous. Donnez-leur votre œil entre deux bilans.</p></div></article>
+          <article><img src="/repere/img/coach-tablette.jpg" alt="" loading="lazy" /><div><h3>Coachs en salle</h3><p>Moins de temps à réexpliquer, plus de temps à coacher.</p></div></article>
+          <article><img src="/repere/img/coach-portrait.jpg" alt="" loading="lazy" /><div><h3>Préparateurs physiques</h3><p>Un tempo, des angles et une trajectoire mesurables, répétition après répétition.</p></div></article>
+          <article><img src="/repere/img/pile-charges.jpg" alt="" loading="lazy" /><div><h3>Salles et studios</h3><p>Vos machines, votre salle et votre enseigne, en 3D pour tous vos adhérents.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ TARIFS -->
+    <section class="paper pricing" id="tarifs">
+      <div class="wrap">
+        <div class="sec-head"><span class="num">08</span><span class="lbl">Tarifs de lancement</span></div>
+        <h2 class="h2">Ce que vous recevez, <em>exactement.</em></h2>
+        <p class="pr-intro">Trois formules sans engagement. Pour chacune, un exemple type de livraison : ce que reçoit le coach, et ce que voit son élève.</p>
+        <div class="plans">
+          <article class="plan">
+            <div class="plan-top">
+              <h3>Solo</h3>
+              <p class="price"><b>49</b><span>€ HT / mois</span></p>
+              <p class="plan-d">Pour démarrer avec vos premiers élèves.</p>
+            </div>
+            <figure class="plan-shot"><img src="/repere/img/salle-repere.jpg" alt="La salle repère, graphite et bleu" loading="lazy" /><figcaption>Salle repère · graphite et bleu</figcaption></figure>
+            <div class="plan-ex">
+              <span class="ex-k">Exemple type</span>
+              <p>Coach en ligne, 18 élèves. Programme de 3 séances par semaine, envoyé en PDF.</p>
+              <ul class="ex-get">
+                <li><b>3</b><span>séances 3D livrées sous 72 h, une par lien</span></li>
+                <li><b>17</b><span>exercices modélisés, un tempo repère pour chacun</span></li>
+                <li><b>3</b><span>fiches A4 avec QR code, prêtes à imprimer</span></li>
+                <li><b>1</b><span>lien par séance : <code>repere.coach/votre-nom/seance-a</code></span></li>
+              </ul>
+            </div>
+            <ul class="plan-inc"><li>Jusqu'à 25 élèves</li><li>2 programmes modélisés par mois</li><li>Les six tempos repère + vos codes libres</li><li>Séries, reps, tempos, repos et notes modifiables</li></ul>
+            <a class="btn btn-ghost-dark" href="#contact"><span>Choisir Solo</span></a>
+          </article>
+          <article class="plan plan-hi">
+            <span class="badge">Recommandé</span>
+            <div class="plan-top">
+              <h3>Signature</h3>
+              <p class="price"><b>129</b><span>€ HT / mois</span></p>
+              <p class="plan-d">Votre marque, partout.</p>
+            </div>
+            <figure class="plan-shot"><img src="/repere/img/salle-atelier.jpg" alt="La même salle aux couleurs d'Atelier Force, marque fictive" loading="lazy" /><figcaption>« Atelier Force » · marque fictive, salle personnalisée</figcaption></figure>
+            <div class="plan-ex">
+              <span class="ex-k">Exemple type</span>
+              <p>Coaching privé, 60 élèves. Logo, or et cognac, parquet noyer, deux programmes par mois.</p>
+              <ul class="ex-get">
+                <li><b>1</b><span>salle à son identité : enseigne, fresques, bannières, sol, plaques</span></li>
+                <li><b>∞</b><span>programmes livrés sous 72 h, sans limite</span></li>
+                <li><b>1</b><span>adresse à son nom : <code>seances.votre-domaine.fr</code></span></li>
+                <li><b>+</b><span>ses vidéos, ses notes et son logo sur chaque fiche</span></li>
+              </ul>
+            </div>
+            <ul class="plan-inc"><li>Élèves illimités</li><li>Programmes modélisés illimités</li><li>Marque blanche complète : salle, domaine, logo, couleurs</li><li>Fiches séance à votre logo</li></ul>
+            <a class="btn btn-main" href="#contact"><span>Choisir Signature</span><i class="tk"></i></a>
+          </article>
+          <article class="plan">
+            <div class="plan-top">
+              <h3>Club</h3>
+              <p class="price"><b>Sur devis</b></p>
+              <p class="plan-d">Pour les salles et les équipes de coachs.</p>
+            </div>
+            <figure class="plan-shot"><img src="/repere/img/salle-minuit.jpg" alt="La même salle aux couleurs de MINUIT, club fictif" loading="lazy" /><figcaption>« MINUIT » · club fictif, ambiance nuit</figcaption></figure>
+            <div class="plan-ex">
+              <span class="ex-k">Exemple type</span>
+              <p>Club ouvert 24 h/24, 4 coachs, 900 adhérents, 2 écrans dans la salle.</p>
+              <ul class="ex-get">
+                <li><b>1</b><span>salle reconstruite en 3D, machine par machine</span></li>
+                <li><b>2</b><span>écrans en « mode salle » : la séance du jour en boucle</span></li>
+                <li><b>4</b><span>espaces coach, une bibliothèque commune</span></li>
+                <li><b>+</b><span>intégration dans votre application adhérents</span></li>
+              </ul>
+            </div>
+            <ul class="plan-inc"><li>Votre salle et vos machines, à l'identique</li><li>Plusieurs coachs, un seul espace</li><li>Écrans en salle</li><li>Accompagnement dédié</li></ul>
+            <a class="btn btn-ghost-dark" href="#contact"><span>Parler de mon club</span></a>
+          </article>
+        </div>
+
+        <div class="kit">
+          <div class="kit-head"><span class="lbl">Inclus dans chaque programme livré</span><h3>Le kit <em>repère.</em></h3></div>
+          <div class="kit-grid">
+            <a class="kit-fiche" href="/repere/fiche/" target="_blank" rel="noopener"><img src="/repere/img/fiche-seance.jpg" alt="Fiche séance A4 du programme Socle, avec tempos et QR code" loading="lazy" /><span>Ouvrir la fiche ↗</span></a>
+            <ol class="kit-list">
+              <li><b>01</b><div><h4>La séance 3D</h4><p>Un lien par séance, sans application à installer. Ordinateur, tablette ou mobile.</p></div></li>
+              <li><b>02</b><div><h4>Les tempos repère</h4><p>Un protocole par exercice, et la règle de tempo en direct sous le compteur.</p></div></li>
+              <li><b>03</b><div><h4>La fiche séance</h4><p>A4 imprimable, à votre logo, avec le QR code qui ouvre la séance 3D.</p></div></li>
+              <li><b>04</b><div><h4>Le mode écran</h4><p>La séance en boucle sur une TV de salle, sans interface.</p></div></li>
+              <li><b>05</b><div><h4>L'espace coach</h4><p>Séries, répétitions, tempos, repos, notes et vidéos, modifiables à tout moment.</p></div></li>
+              <li><b>06</b><div><h4>Votre salle</h4><p>Murs, sol, machines, lumière, enseigne : de la salle repère à votre propre salle.</p></div></li>
+            </ol>
+          </div>
+        </div>
+        <p class="pr-note">Mise en place offerte pour les 50 premiers coachs. Résiliable à tout moment.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ FAQ -->
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <div class="sec-head"><span class="num">09</span><span class="lbl">Questions</span></div>
+        <h2 class="h2">Ce que les coachs <em>nous demandent.</em></h2>
+        <div class="faq-list">
+          <details><summary>Mes élèves doivent-ils installer une application ?</summary><p>Non. Un lien suffit : la séance s'ouvre dans le navigateur, sur ordinateur, tablette ou mobile récent.</p></details>
+          <details><summary>D'où viennent les tempos repère ?</summary><p>Ce sont des protocoles conçus par repère à partir de la recherche sur le tempo et l'amplitude : durée des répétitions, intention de vitesse, travail en position allongée. Les sources sont citées sur chaque protocole. Ils ne promettent pas de miracle : ils rendent votre intention lisible et reproductible.</p></details>
+          <details><summary>Puis-je utiliser mes propres tempos ?</summary><p>Oui. Choisissez un tempo repère ou tapez votre code (par exemple 4·1·X·1). Séries, répétitions, repos et notes se modifient aussi depuis votre espace coach : le pantin s'adapte instantanément, sans nouvelle modélisation.</p></details>
+          <details><summary>Et si un exercice de mon programme n'existe pas encore ?</summary><p>Nous le modélisons. Chaque mouvement est construit à partir de la biomécanique (angles, trajectoire, tempo), sans tournage : nous pouvons donc ajouter vos variantes.</p></details>
+          <details><summary>Jusqu'où peut-on personnaliser la salle ?</summary><p>Nom, logo, couleur, typographie de l'enseigne, phrase au mur, fresque, murs, structure des machines, sellerie, sol, ambiance lumineuse et tenue du pantin. Avec l'offre Club, nous reproduisons votre propre salle et vos machines.</p></details>
+          <details><summary>Est-ce que ça remplace mes vidéos ?</summary><p>Ça les complète. Vos vidéos restent accessibles depuis chaque exercice ; la 3D montre ce qu'une vidéo ne montre pas : tous les angles, le tempo exact et les repères articulaires.</p></details>
+          <details><summary>Combien de temps pour démarrer ?</summary><p>Envoyez un programme : vous recevez sa version 3D sous 72 heures ouvrées, prête à partager.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ CONTACT -->
+    <section class="cta" id="contact">
+      <video class="cta-bg" src="/repere/video/craie.mp4" poster="/repere/video/craie-poster.jpg" autoplay muted loop playsinline preload="none"></video>
+      <div class="wrap">
+        <div class="cta-left">
+          <span class="lbl">Démo personnalisée · 20 minutes</span>
+          <h2>À vous de montrer <em>le geste.</em></h2>
+          <p>Envoyez-nous une séance de votre programme : nous vous la montrons en 3D, à vos couleurs, pendant la démo.</p>
+        </div>
+        <form class="cta-form" id="cta-form">
+          <label><span>Prénom</span><input name="prenom" required autocomplete="given-name" /></label>
+          <label><span>Email</span><input name="email" type="email" required autocomplete="email" /></label>
+          <label><span>Nombre d'élèves</span><select name="eleves"><option>Moins de 10</option><option>10 à 30</option><option>30 à 100</option><option>Plus de 100</option></select></label>
+          <label class="full"><span>Votre programme en une phrase</span><input name="msg" placeholder="ex. 4 séances par semaine, hypertrophie, tempo strict" /></label>
+          <button class="btn btn-chalk full" type="submit"><span>Réserver ma démo</span><i class="tk"></i></button>
+          <p class="form-note" id="form-note">Réponse sous 24 h. Aucune carte bancaire.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-logo" id="foot-logo"></div>
+      <p class="foot-tag"><em>Le bon geste, avant la première rep.</em></p>
+      <div class="foot-cols">
+        <div><b>Produit</b><a href="#produit">La séance 3D</a><a href="#tempos">Les tempos repère</a><a href="#marque">Votre salle</a><a href="/repere/app/">Démo en ligne</a><a href="/repere/fiche/">Fiche séance</a></div>
+        <div><b>Coachs</b><a href="#methode">Méthode</a><a href="#tarifs">Tarifs</a><a href="#faq">FAQ</a></div>
+        <div><b>Contact</b><a href="#contact">Réserver une démo</a><a href="mailto:contact@repere.coach">contact@repere.coach</a></div>
+      </div>
+      <div class="foot-base"><span>© 2026 repère</span><span>repere.coach</span><span>Rendu 3D temps réel · WebGL</span></div>
+    </div>
+  </footer>
+
+</body>
+</html>
